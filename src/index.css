@@ -1,0 +1,28 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  padding: 5px;
+  border: 1px solid #ce1414;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.product-img {
+  height: 120px;
+  width: 120px;
+}
+
+.card > h1{
+  font-size:13px
+}
+
+button{
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
