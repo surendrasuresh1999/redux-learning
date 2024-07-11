@@ -9,16 +9,17 @@ const productSlice = createSlice({
   name: "product",
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(getProducts.fulfilled, (state, action) => {
-      state.data = action.payload;
-      state.status = "fulfilled";
-    });
-    builder.addCase(getProducts.pending, (state, action) => {
-      state.status = "loading";
-    });
-    builder.addCase(getProducts.rejected, (state, action) => {
-      state.status = "error";
-    });
+    builder
+      .addCase(getProducts.fulfilled, (state, action) => {
+        state.data = action.payload;
+        state.status = "fulfilled";
+      })
+      .addCase(getProducts.pending, (state, action) => {
+        state.status = "loading";
+      })
+      .addCase(getProducts.rejected, (state, action) => {
+        state.status = "error";
+      });
   },
 });
 
